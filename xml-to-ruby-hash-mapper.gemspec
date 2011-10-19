@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
     "lib/xml_to_ruby_hash_mapper/xml_mapper.rb",
     "spec/lib/xml_to_ruby_hash_mapper/xml_mapper_spec.rb",
     "spec/spec_helper.rb",
-    "xml_to_ruby_hash_mapper.gemspec"
+    "xml-to-ruby-hash-mapper.gemspec"
   ]
   s.homepage = %q{http://github.com/bbcsnippets/xml-to-ruby-hash-mapper}
   s.licenses = [%q{MIT}]
