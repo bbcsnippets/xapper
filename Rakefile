@@ -11,7 +11,7 @@ require 'rake'
 
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
-  gem.name = "xml_to_ruby_hash_mapper"
+  gem.name = "xml-to-ruby-hash-mapper"
   gem.homepage = "http://github.com/bbcsnippets/xml-to-ruby-hash-mapper"
   gem.license = "MIT"
   gem.summary = %Q{A simple mapper that takes an XML and maps it into a ruby hash}
