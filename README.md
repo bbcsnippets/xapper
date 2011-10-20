@@ -15,6 +15,8 @@ In your code
 
 ## Usage
 
+### Setup
+
 Get a mapper object
 
     mapper = XmlToRubyHashMapper::XmlMapper::Mapper.new
@@ -35,8 +37,8 @@ And some hopefully less contrived XML
         </book>
       </books>
     </response>
-
-You can map simple attributes and text values using xpath
+                    
+### Mapping text values and attributes using xpath
 
     mapper.mappings = {
       :type   => "/response/@type",
@@ -48,7 +50,7 @@ You can map simple attributes and text values using xpath
     data[:type]  #=> "book_list"
     data[:title] #=> "A list of books on my shelf"
 
-You can map lists into arrays
+### Mapping lists of XML nodes into arrays of hashes
 
     mapper.mappings = {
       :books => ["/response/books/book", {
@@ -63,6 +65,8 @@ You can map lists into arrays
     data[:books][0][:title]  #=> "The Winter Queen"
     data[:books][0][:author] #=> "Boris Akunin"
 
+
+### Using a lambda to convert values 
 
 You can map via a lambda, the current [Nokogiri](http://nokogiri.org/) node is passed as an argument
 
