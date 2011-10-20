@@ -27,4 +27,9 @@ RSpec::Core::RakeTask.new(:spec) do |spec|
   spec.pattern = FileList['spec/**/*_spec.rb']
 end
 
+task :examples do
+  $: << "."
+  require "examples/book_list"
+end
+
 task :default => :spec
