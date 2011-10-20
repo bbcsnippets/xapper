@@ -90,6 +90,6 @@ Please send new code in the form of a pull requests with tests. Run the current 
 
 ## Contributors:
 
-[Matt Haynes](https://github.com/matth)
-[Anuj Dutta](https://github.com/andhapp/)
-[Jim Lynn](https://github.com/JimLynn)
+* [Matt Haynes](https://github.com/matth)
+* [Anuj Dutta](https://github.com/andhapp/)
+* [Jim Lynn](https://github.com/JimLynn)
