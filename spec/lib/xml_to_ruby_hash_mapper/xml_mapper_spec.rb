@@ -117,4 +117,45 @@ describe XmlToRubyHashMapper::XmlMapper::Mapper do
 
   end
 
+  it "should map namespaces correctly" do
+
+    xml = %q{
+      <root xmlns:h="http://www.w3.org/TR/html4/" xmlns:f="http://www.w3schools.com/furniture">
+        <h:table>
+          <h:tr>
+            <h:td>Apples</h:td>
+            <h:td>Bananas</h:td>
+          </h:tr>
+        </h:table>
+        <f:table>
+          <f:name>African Coffee Table</f:name>
+          <f:width>80</f:width>
+          <f:length>120</f:length>
+        </f:table>
+      </root>
+    }
+
+    @mapper.mappings = {
+      :html_table_rows => ["/root/h:table/h:tr/h:td", { :text => "." }],
+      :an_actual_table => {
+        :name   => "/root/f:table/f:name",
+        :width  => "/root/f:table/f:width",
+        :length => "/root/f:table/f:length"
+      }
+    }
+
+    @mapper.namespaces = {
+      "h" => "http://www.w3.org/TR/html4/",
+      "f" => "http://www.w3schools.com/furniture"
+    }
+
+    data = @mapper.map(xml)
+
+    data[:html_table_rows].size.should == 2
+    data[:html_table_rows][0][:text].should  == "Apples"
+
+    data[:an_actual_table][:name].should  == "African Coffee Table"
+    data[:an_actual_table][:width].should == "80"
+  end
+
 end
