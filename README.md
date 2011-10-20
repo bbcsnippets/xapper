@@ -81,6 +81,9 @@ You can map via a lambda, the current [Nokogiri](http://nokogiri.org/) node is p
     data = mapper.map(xml)
     data[:books][0][:author][:wiki] #=> "http://en.wikipedia.org/wiki/Boris_Akunin"
 
+## Examples
+
+See `examples/*.rb`, run with `rake examples`
 
 ## Development
 
