@@ -62,6 +62,34 @@ describe XmlToRubyHashMapper::XmlMapper::Mapper do
 
     end
 
+    it 'should map an multiple xml elements to an array' do
+      xml = %q{
+        <?xml version="1.0" encoding="UTF-8"?>
+        <foo>
+          <bar>
+            <baz attr="Attr value 1">Text value 1</bar>
+          </bar>
+          <bar>
+            <baz attr="Attr value 2">Text value 2</bar>
+          </bar>
+        </foo>
+      }
+      @mapper.mappings = {
+        :bar => ['/foo/bar', {
+          :baz => {
+            :attr => 'baz/@attr',
+            :text => 'baz'
+          }
+        }]
+      }
+      data = @mapper.map xml
+      data[:bar].size.should == 2
+      data[:bar][0][:baz][:attr].should == "Attr value 1"
+      data[:bar][0][:baz][:text].should == "Text value 1"
+      data[:bar][1][:baz][:attr].should == "Attr value 2"
+      data[:bar][1][:baz][:text].should == "Text value 2"
+    end
+
     it 'should map into a nested hash' do
       xml = %q{
         <?xml version="1.0" encoding="UTF-8"?>
