@@ -11,13 +11,13 @@ require 'rake'
 
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
-  gem.name = "xml-to-ruby-hash-mapper"
-  gem.homepage = "http://github.com/bbcsnippets/xml-to-ruby-hash-mapper"
+  gem.name = "xapper"
+  gem.homepage = "http://github.com/bbcsnippets/xapper"
   gem.license = "MIT"
   gem.summary = %Q{A simple mapper that takes an XML and maps it into a ruby hash}
   gem.description = %Q{Give it an xml and define a mapping for it as a ruby hash and there you have it. A ruby hash for your XML}
   gem.email = "dutta.anuj@gmail.com"
-  gem.authors = ["andhapp"]
+  gem.authors = ["andhapp", "matth"]
 end
 Jeweler::RubygemsDotOrgTasks.new
 

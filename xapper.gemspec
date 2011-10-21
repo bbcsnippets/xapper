@@ -4,34 +4,34 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "xapper"
+  s.name = %q{xapper}
   s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["andhapp","matth"]
-  s.date = %q{2011-10-19}
+  s.authors = ["andhapp", "matth"]
+  s.date = %q{2011-10-21}
   s.description = %q{Give it an xml and define a mapping for it as a ruby hash and there you have it. A ruby hash for your XML}
   s.email = %q{dutta.anuj@gmail.com}
   s.extra_rdoc_files = [
     "README.md"
   ]
   s.files = [
-    ".rpsec",
     ".rspec",
     "Gemfile",
     "Gemfile.lock",
     "README.md",
     "Rakefile",
     "VERSION",
+    "examples/book_list.rb",
     "lib/xapper.rb",
     "spec/lib/xapper_spec.rb",
     "spec/spec_helper.rb",
     "xapper.gemspec"
   ]
   s.homepage = %q{http://github.com/bbcsnippets/xapper}
-  s.licenses = [%q{MIT}]
-  s.require_paths = [%q{lib}]
-  s.rubygems_version = %q{1.8.9}
+  s.licenses = ["MIT"]
+  s.require_paths = ["lib"]
+  s.rubygems_version = %q{1.6.2}
   s.summary = %q{A simple mapper that takes an XML and maps it into a ruby hash}
 
   if s.respond_to? :specification_version then
