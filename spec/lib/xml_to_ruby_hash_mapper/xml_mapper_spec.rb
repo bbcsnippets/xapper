@@ -62,6 +62,20 @@ describe XmlToRubyHashMapper::XmlMapper::Mapper do
 
     end
 
+    it 'should map a node to nil if it does not exist' do
+      xml = %q{
+        <?xml version="1.0" encoding="UTF-8"?>
+        <foo><bar /></foo>
+      }
+      @mapper.mappings = {
+        :bar => "/foo/bar/@attr",
+        :baz => "/foo/baz"
+      }
+      data = @mapper.map xml
+      data[:bar].should == nil
+      data[:baz].should == nil
+    end
+
     it 'should map an multiple xml elements to an array' do
       xml = %q{
         <?xml version="1.0" encoding="UTF-8"?>
