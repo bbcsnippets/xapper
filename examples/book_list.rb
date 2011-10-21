@@ -1,4 +1,4 @@
-require "xml_to_ruby_hash_mapper"
+require "xapper"
 require "pp"
 
 xml = %q{
@@ -20,7 +20,7 @@ xml = %q{
 
 puts "Mapping: \n #{xml}"
 
-mapper = XmlToRubyHashMapper::XmlMapper::Mapper.new
+mapper = Xapper::Mapper.new
 
 mapper.mappings = {
   :type   => "/response/@type",

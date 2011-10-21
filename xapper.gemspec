@@ -4,11 +4,11 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{xml-to-ruby-hash-mapper}
+  s.name = "xapper"
   s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = [%q{andhapp}]
+  s.authors = ["andhapp","matth"]
   s.date = %q{2011-10-19}
   s.description = %q{Give it an xml and define a mapping for it as a ruby hash and there you have it. A ruby hash for your XML}
   s.email = %q{dutta.anuj@gmail.com}
@@ -23,13 +23,12 @@ Gem::Specification.new do |s|
     "README.md",
     "Rakefile",
     "VERSION",
-    "lib/xml_to_ruby_hash_mapper.rb",
-    "lib/xml_to_ruby_hash_mapper/xml_mapper.rb",
-    "spec/lib/xml_to_ruby_hash_mapper/xml_mapper_spec.rb",
+    "lib/xapper.rb",
+    "spec/lib/xapper_spec.rb",
     "spec/spec_helper.rb",
-    "xml-to-ruby-hash-mapper.gemspec"
+    "xapper.gemspec"
   ]
-  s.homepage = %q{http://github.com/bbcsnippets/xml-to-ruby-hash-mapper}
+  s.homepage = %q{http://github.com/bbcsnippets/xapper}
   s.licenses = [%q{MIT}]
   s.require_paths = [%q{lib}]
   s.rubygems_version = %q{1.8.9}

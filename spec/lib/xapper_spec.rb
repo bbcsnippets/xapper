@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe XmlToRubyHashMapper::XmlMapper::Mapper do
+describe Xapper::Mapper do
 
   before do
-    @mapper = XmlToRubyHashMapper::XmlMapper::Mapper.new
+    @mapper = Xapper::Mapper.new
   end
 
   describe '#map' do
