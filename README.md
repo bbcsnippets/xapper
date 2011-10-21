@@ -1,4 +1,4 @@
-# XML to ruby hash mapper
+# Xapper - another XML mapper for Ruby
 
 A simple mapper that takes a mapping and converts your ugly-XML to a lovely-ruby hash.
 
@@ -7,11 +7,11 @@ A simple mapper that takes a mapping and converts your ugly-XML to a lovely-ruby
 
 Use [Bundler](http://gembundler.com/) + git, add this to your `Gemfile`
 
-    gem "xml-to-ruby-hash-mapper", :git => "http://github.com/bbcsnippets/xml-to-ruby-hash-mapper"
+    gem "xapper"
 
 In your code
 
-    require "xml_to_ruby_hash_mapper"
+    require "xapper"
 
 ## Usage
 
@@ -19,7 +19,7 @@ In your code
 
 Get a mapper object
 
-    mapper = XmlToRubyHashMapper::XmlMapper::Mapper.new
+    mapper = Xapper::Mapper.new
 
 And some hopefully less contrived XML
 
